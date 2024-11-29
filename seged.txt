@@ -1,0 +1,19 @@
+<header class="bg-white shadow-md">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between py-4">
+        <h1 class="text-3xl font-bold text-green-700">CSALOMON® csapdák</h1>
+        
+        <!-- Mobile menu button -->
+        <button class="md:hidden p-2" id="mobile-menu-button">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+        <!-- Főoldal gomb -->
+        <a href="index.html" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors">
+          Vissza a főoldalra
+        </a>
+      </div>
+    </div>
+  </header>
