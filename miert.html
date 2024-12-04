@@ -13,7 +13,7 @@
             <h1 class="text-3xl font-bold text-green-700">CSALOMON® csapdák</h1>
             
             <!-- Mobile menu button -->
-            <button class="md:hidden p-2" id="mobile-menu-button">
+            <button class="md:hidden p-2" id="mobile-menu-button" onclick="toggleMobileMenu()">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
@@ -70,7 +70,7 @@
         </div>
 
         <!-- Mobile Navigation -->
-        <nav class="hidden" id="mobile-menu">
+        <nav class="md:hidden" id="mobile-menu">
             <div class="flex flex-col space-y-2 pb-4 text-gray-600">
                 <!-- Főoldal szekció -->
                 <div class="border-b border-gray-200">
@@ -131,12 +131,18 @@
         </nav>
 
         <script>
+            function toggleMobileMenu() {
+                const mobileMenu = document.getElementById('mobile-menu');
+                mobileMenu.classList.toggle('hidden');
+            }
+            
             function toggleSection(sectionId) {
                 const section = document.getElementById(sectionId);
                 section.classList.toggle('hidden');
             }
         </script>
     </div>
+</header>
 </header>
 
   <div class="max-w-4xl mx-auto">
