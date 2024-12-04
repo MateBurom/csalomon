@@ -6,6 +6,137 @@
   <title>Document</title>
 </head>
 <body style="background-image: url('background.png'); background-size: cover; background-position: center; background-attachment: fixed;">
-  
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between py-4">
+            <h1 class="text-3xl font-bold text-green-700">CSALOMON® csapdák</h1>
+            
+            <!-- Mobile menu button -->
+            <button class="md:hidden p-2" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:block">
+                <div class="flex flex-wrap gap-4 text-gray-600">
+                    <!-- Főmenü -->
+                    <div class="group relative">
+                        <button class="hover:text-green-600 transition-colors">Főoldal</button>
+                        <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            <a href="index.html" class="block px-4 py-2 hover:bg-green-50">Kezdőlap</a>
+                            <a href="about.html" class="block px-4 py-2 hover:bg-green-50">Rólunk</a>
+                            <a href="new.prod.html" class="block px-4 py-2 hover:bg-green-50">Új termékeink</a>
+                        </div>
+                    </div>
+
+                    <!-- Termékek menü -->
+                    <div class="group relative">
+                        <button class="hover:text-green-600 transition-colors">Termékek</button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg py-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            <a href="miert.html" class="block px-4 py-2 hover:bg-green-50">Miért érdemes csapdázni?</a>
+                            <a href="csapdakin.html" class="block px-4 py-2 hover:bg-green-50">Csapdakínálatunk</a>
+                            <a href="https://csalomon/faq.html" class="block px-4 py-2 hover:bg-green-50">Hasznos rovarok csalogatása</a>
+                            <a href="https://csalomon/research.html" class="block px-4 py-2 hover:bg-green-50">Csapdatípusaink</a>
+                            <a href="https://csalomon/news.html" class="block px-4 py-2 hover:bg-green-50">Kukoricabogár csapdák</a>
+                        </div>
+                    </div>
+
+                    <!-- Információk menü -->
+                    <div class="group relative">
+                        <button class="hover:text-green-600 transition-colors">Információk</button>
+                        <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            <a href="https://csalomon/partners.html" class="block px-4 py-2 hover:bg-green-50">Partnereink</a>
+                            <a href="https://csalomon/downloads.html" class="block px-4 py-2 hover:bg-green-50">Szakcikkeink</a>
+                            <a href="https://csalomon/support.html" class="block px-4 py-2 hover:bg-green-50">Gyakori kérdések</a>
+                        </div>
+                    </div>
+
+                    <!-- Vásárlás menü -->
+                    <div class="group relative">
+                        <button class="hover:text-green-600 transition-colors">Vásárlás</button>
+                        <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            <a href="https://csalomon/gallery.html" class="block px-4 py-2 hover:bg-green-50">Megrendelés Menete</a>
+                            <a href="https://csalomon/blog.html" class="block px-4 py-2 hover:bg-green-50">Webáruház</a>
+                            <a href="https://csalomon/shop.html" class="block px-4 py-2 hover:bg-green-50">Adatkezelési tájékoztató</a>
+                        </div>
+                    </div>
+
+                    <a href="https://csalomon/contact.html" class="hover:text-green-600 transition-colors">Kapcsolat</a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="hidden" id="mobile-menu">
+            <div class="flex flex-col space-y-2 pb-4 text-gray-600">
+                <!-- Főoldal szekció -->
+                <div class="border-b border-gray-200">
+                    <button class="w-full py-2 px-4 text-left hover:bg-gray-50 flex justify-between items-center" onclick="toggleSection('fooldal')">
+                        Főoldal
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div id="fooldal" class="hidden pl-4">
+                        <a href="/index.html" class="block py-2 hover:text-green-600">Kezdőlap</a>
+                        <a href="about.html" class="block py-2 hover:text-green-600">Rólunk</a>
+                        <a href="new.prod.html" class="block py-2 hover:text-green-600">Új termékeink</a>
+                    </div>
+                </div>
+
+                <!-- Termékek szekció -->
+                <div class="border-b border-gray-200">
+                    <button class="w-full py-2 px-4 text-left hover:bg-gray-50 flex justify-between items-center" onclick="toggleSection('termekek')">
+                        Termékek
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div id="termekek" class="hidden pl-4">
+                        <a href="https://csalomon/products.html" class="block py-2 hover:text-green-600">Miért érdemes csapdázni?</a>
+                        <a href="https://csalomon/calendar.html" class="block py-2 hover:text-green-600">Csapdakínálatunk</a>
+                        <a href="https://csalomon/faq.html" class="block py-2 hover:text-green-600">Hasznos rovarok csalogatása</a>
+                        <a href="https://csalomon/research.html" class="block py-2 hover:text-green-600">Csapdatípusaink</a>
+                        <a href="https://csalomon/news.html" class="block py-2 hover:text-green-600">Kukoricabogár csapdák</a>
+                    </div>
+                </div>
+
+                <!-- Információk szekció -->
+                <div class="border-b border-gray-200">
+                    <button class="w-full py-2 px-4 text-left hover:bg-gray-50 flex justify-between items-center" onclick="toggleSection('info')">
+                        Információk
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div id="info" class="hidden pl-4">
+                        <a href="https://csalomon/partners.html" class="block py-2 hover:text-green-600">Partnereink</a>
+                        <a href="https://csalomon/downloads.html" class="block py-2 hover:text-green-600">Szakcikkeink</a>
+                        <a href="https://csalomon/support.html" class="block py-2 hover:text-green-600">Gyakori kérdések</a>
+                    </div>
+                </div>
+
+                <!-- Vásárlás szekció -->
+                <div class="border-b border-gray-200">
+                    <button class="w-full py-2 px-4 text-left hover:bg-gray-50 flex justify-between items-center" onclick="toggleSection('vasarlas')">
+                        Vásárlás
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div id="vasarlas" class="hidden pl-4">
+                        <a href="https://csalomon/gallery.html" class="block py-2 hover:text-green-600">Megrendelés Menete</a>
+                        <a href="https://csalomon/blog.html" class="block py-2 hover:text-green-600">Webáruház</a>
+                        <a href="https://csalomon/shop.html" class="block py-2 hover:text-green-600">Adatkezelési tájékoztató</a>
+                    </div>
+                </div>
+
+                <a href="https://csalomon/contact.html" class="block py-2 px-4 hover:text-green-600">Kapcsolat</a>
+            </div>
+        </nav>
+
+        <script>
+            function toggleSection(sectionId) {
+                const section = document.getElementById(sectionId);
+                section.classList.toggle('hidden');
+            }
+        </script>
+    </div>
+</header>
+
 </body>
 </html>
