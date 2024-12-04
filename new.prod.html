@@ -25,7 +25,7 @@
                         <!-- Főmenü -->
                         <div class="group relative">
                             <button class="hover:text-green-600 transition-colors">Főoldal</button>
-                            <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 z-50">
                                 <a href="index.html" class="block px-4 py-2 hover:bg-green-50">Kezdőlap</a>
                                 <a href="about.html" class="block px-4 py-2 hover:bg-green-50">Rólunk</a>
                                 <a href="new.prod.html" class="block px-4 py-2 hover:bg-green-50">Új termékeink</a>
@@ -35,7 +35,7 @@
                         <!-- Termékek menü -->
                         <div class="group relative">
                             <button class="hover:text-green-600 transition-colors">Termékek</button>
-                            <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg py-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg py-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 z-50">
                                 <a href="miert.html" class="block px-4 py-2 hover:bg-green-50">Miért érdemes csapdázni?</a>
                                 <a href="csapdakin.html" class="block px-4 py-2 hover:bg-green-50">Csapdakínálatunk</a>
                                 <a href="https://csalomon/faq.html" class="block px-4 py-2 hover:bg-green-50">Hasznos rovarok csalogatása</a>
@@ -47,7 +47,7 @@
                         <!-- Információk menü -->
                         <div class="group relative">
                             <button class="hover:text-green-600 transition-colors">Információk</button>
-                            <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 z-50">
                                 <a href="https://csalomon/partners.html" class="block px-4 py-2 hover:bg-green-50">Partnereink</a>
                                 <a href="https://csalomon/downloads.html" class="block px-4 py-2 hover:bg-green-50">Szakcikkeink</a>
                                 <a href="https://csalomon/support.html" class="block px-4 py-2 hover:bg-green-50">Gyakori kérdések</a>
@@ -57,7 +57,7 @@
                         <!-- Vásárlás menü -->
                         <div class="group relative">
                             <button class="hover:text-green-600 transition-colors">Vásárlás</button>
-                            <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 z-50">
                                 <a href="https://csalomon/gallery.html" class="block px-4 py-2 hover:bg-green-50">Megrendelés Menete</a>
                                 <a href="https://csalomon/blog.html" class="block px-4 py-2 hover:bg-green-50">Webáruház</a>
                                 <a href="https://csalomon/shop.html" class="block px-4 py-2 hover:bg-green-50">Adatkezelési tájékoztató</a>
@@ -143,23 +143,22 @@
             </script>
         </div>
     </header>
-  
 
 
 
     <main class="container mx-auto px-4 py-8">
         <h1 class="text-3xl font-bold text-gray-900 mb-8 text-center">ÚJ TERMÉKEINK</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             
             <!-- 1. -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center">
-                <h2 class="text-xl font-semibold text-gray-900 mb-3">S. frugiperda bagolylepke</h2>
-                <img src="newprod.pics/3.1.jpg" alt="S. frugiperda bagolylepke" class="mb-4 w-full rounded-lg object-cover mx-auto" style="height: 300px; width: 300px;">
-                <p class="text-gray-600 mb-4">
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">S. frugiperda bagolylepke</h2>
+                <img src="newprod.pics/3.1.jpg" alt="S. frugiperda bagolylepke" class="mb-4 w-full h-48 sm:h-64 rounded-lg object-cover mx-auto">
+                <p class="text-sm sm:text-base text-gray-600 mb-4">
                     Az eredetileg Amerikában honos kártevőt az évek során behurcolták Afrikába, ahonnan tovább terjedve ma már komoly károkat okoz Indiában és Kínában, valamint Ausztráliában is jelen van.
                 </p>
-                <div class="bg-green-50 p-4 rounded-md">
-                    <p class="text-sm text-green-800">
+                <div class="bg-green-50 p-3 sm:p-4 rounded-md">
+                    <p class="text-xs sm:text-sm text-green-800">
                         <span class="font-medium">Javasolt csapdatípus:</span> VARL+
                         <br>
                         <span class="font-medium">Rendelhető:</span> 2022-től
@@ -168,14 +167,14 @@
             </div>
 
             <!-- 2. -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center">
-                <h2 class="text-xl font-semibold text-gray-900 mb-3">Szilva levélbolha</h2>
-                <img src="newprod.pics/3.2.jpg" alt="S. frugiperda bagolylepke" class="mb-4 w-full rounded-lg object-cover mx-auto" style="height: 300px; width: 300px;">
-                <p class="text-gray-600 mb-4">
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Szilva levélbolha</h2>
+                <img src="newprod.pics/3.2.jpg" alt="Szilva levélbolha" class="mb-4 w-full h-48 sm:h-64 rounded-lg object-cover mx-auto">
+                <p class="text-sm sm:text-base text-gray-600 mb-4">
                     A European stone fruit yellows (ESFY) betegség fitoplazmáját terjeszti egyik növényről a másikra. Magyarországon egyre növekszik a fitoplazmával fertőzőtt kajszi és más gyümölcsösök száma.
                 </p>
-                <div class="bg-green-50 p-4 rounded-md">
-                    <p class="text-sm text-green-800">
+                <div class="bg-green-50 p-3 sm:p-4 rounded-md">
+                    <p class="text-xs sm:text-sm text-green-800">
                         <span class="font-medium">Javasolt csapdatípus:</span> SZf/10
                         <br>
                         <span class="font-medium">Rendelhető:</span> 2021-től
@@ -184,14 +183,14 @@
             </div>
 
             <!-- 3. -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center">
-                <h2 class="text-xl font-semibold text-gray-900 mb-3">Repcebecő gubacsszúnyog</h2>
-                <img src="newprod.pics/3.3.jpg" alt="S. frugiperda bagolylepke" class="mb-4 w-full rounded-lg object-cover mx-auto" style="height: 300px; width: 300px;">
-                <p class="text-gray-600 mb-4">
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Repcebecő gubacsszúnyog</h2>
+                <img src="newprod.pics/3.3.jpg" alt="Repcebecő gubacsszúnyog" class="mb-4 w-full h-48 sm:h-64 rounded-lg object-cover mx-auto">
+                <p class="text-sm sm:text-base text-gray-600 mb-4">
                     A repce és más keresztesvirágú haszonnövények Európa szerte előforduló, fontos kártevője. A csapda csalétke nem feromon, hanem táplálkozási attraktáns, nőstényeket és hímeket is csalogat.
                 </p>
-                <div class="bg-green-50 p-4 rounded-md">
-                    <p class="text-sm text-green-800">
+                <div class="bg-green-50 p-3 sm:p-4 rounded-md">
+                    <p class="text-xs sm:text-sm text-green-800">
                         <span class="font-medium">Javasolt csapdatípus:</span> RAG
                         <br>
                         <span class="font-medium">Rendelhető:</span> 2021-től
@@ -200,14 +199,14 @@
             </div>
 
             <!-- 4. -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center">
-                <h2 class="text-xl font-semibold text-gray-900 mb-3">Karcsúdíszbogár fajok</h2>
-                <img src="newprod.pics/3.4.jpg" alt="S. frugiperda bagolylepke" class="mb-4 w-full rounded-lg object-cover mx-auto" style="height: 300px; width: 300px;">
-                <p class="text-gray-600 mb-4">
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Karcsúdíszbogár fajok</h2>
+                <img src="newprod.pics/3.4.jpg" alt="Karcsúdíszbogár fajok" class="mb-4 w-full h-48 sm:h-64 rounded-lg object-cover mx-auto">
+                <p class="text-sm sm:text-base text-gray-600 mb-4">
                     Az egyes fajok szűk tápnövény körrel rendelkeznek. A lárvák élő növényi szövetekben, a fák vagy bokrok kérgében fejlődnek.
                 </p>
-                <div class="bg-green-50 p-4 rounded-md">
-                    <p class="text-sm text-green-800">
+                <div class="bg-green-50 p-3 sm:p-4 rounded-md">
+                    <p class="text-xs sm:text-sm text-green-800">
                         <span class="font-medium">Javasolt csapdatípus:</span> MULTz
                         <br>
                         <span class="font-medium">Rendelhető:</span> 2021-től
@@ -216,14 +215,14 @@
             </div>
 
             <!-- 5. -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center">
-                <h2 class="text-xl font-semibold text-gray-900 mb-3">Káposztabolha fajok</h2>
-                <img src="newprod.pics/3.5.jpg" alt="S. frugiperda bagolylepke" class="mb-4 w-full rounded-lg object-cover mx-auto" style="height: 300px; width: 300px;">
-                <p class="text-gray-600 mb-4">
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Káposztabolha fajok</h2>
+                <img src="newprod.pics/3.5.jpg" alt="Káposztabolha fajok" class="mb-4 w-full h-48 sm:h-64 rounded-lg object-cover mx-auto">
+                <p class="text-sm sm:text-base text-gray-600 mb-4">
                     A káposztaféléken, retken, repcén károsító káposztabolha fajokat egyaránt jól fogja. A Ph. vittula egyszikűeken károsító populációi is foghatók.
                 </p>
-                <div class="bg-green-50 p-4 rounded-md">
-                    <p class="text-sm text-green-800">
+                <div class="bg-green-50 p-3 sm:p-4 rounded-md">
+                    <p class="text-xs sm:text-sm text-green-800">
                         <span class="font-medium">Javasolt csapdatípus:</span> KLP+
                         <br>
                         <span class="font-medium">Rendelhető:</span> 2006-tól
@@ -232,28 +231,28 @@
             </div>
 
             <!-- 6. -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center">
-                <h2 class="text-xl font-semibold text-gray-900 mb-3">VARs+ csapda</h2>
-                <img src="newprod.pics/3.6.jpg" alt="S. frugiperda bagolylepke" class="mb-4 w-full rounded-lg object-cover mx-auto" style="height: 300px; width: 300px;">
-                <p class="text-gray-600 mb-4">
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">VARs+ csapda</h2>
+                <img src="newprod.pics/3.6.jpg" alt="VARs+ csapda" class="mb-4 w-full h-48 sm:h-64 rounded-lg object-cover mx-auto">
+                <p class="text-sm sm:text-base text-gray-600 mb-4">
                     Új, egyszerűsített modell A korábbi VARs+ csapdatípus alapján új csapdaalak modellt fejlesztettünk ki, az egyszerűbb összeszerelés és kezelhetőség érdekében.
                 </p>
-                <div class="bg-green-50 p-4 rounded-md">
-                    <p class="text-sm text-green-800">
+                <div class="bg-green-50 p-3 sm:p-4 rounded-md">
+                    <p class="text-xs sm:text-sm text-green-800">
                         <span class="font-medium">Rendelhető:</span> 2018-tól
                     </p>
                 </div>
             </div>
 
             <!-- 7. -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center">
-                <h2 class="text-xl font-semibold text-gray-900 mb-3">Selyemfényű puszpángmoly</h2>
-                <img src="newprod.pics/3.7.jpg" alt="S. exigua bagolylepke" class="mb-4 w-full rounded-lg object-cover mx-auto" style="height: 300px; width: 300px;">
-                <p class="text-gray-600 mb-4">
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Selyemfényű puszpángmoly</h2>
+                <img src="newprod.pics/3.7.jpg" alt="Selyemfényű puszpángmoly" class="mb-4 w-full h-48 sm:h-64 rounded-lg object-cover mx-auto">
+                <p class="text-sm sm:text-base text-gray-600 mb-4">
                     Cydalima perspectalis  A puszpáng (Buxus) fajokon károsító, eredetileg Kelet-Ázsiában, honos, invazív kártevő 2010-ben jelent meg hazánkban, 2016-ra eljutott a legkeletibb megyékig is. 
                 </p>
-                <div class="bg-green-50 p-4 rounded-md">
-                    <p class="text-sm text-green-800">
+                <div class="bg-green-50 p-3 sm:p-4 rounded-md">
+                    <p class="text-xs sm:text-sm text-green-800">
                         <span class="font-medium">Javasolt csapdatípus:</span> VARL
                         <br>
                         <span class="font-medium">Rendelhető:</span> 2017-től
@@ -262,14 +261,14 @@
             </div>
 
             <!-- 8. -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center">
-                <h2 class="text-xl font-semibold text-gray-900 mb-3">S. exigua bagolylepke</h2>
-                <img src="newprod.pics/3.8.jpg" alt="S. frugiperda bagolylepke" class="mb-4 w-full rounded-lg object-cover mx-auto" style="height: 300px; width: 300px;">
-                <p class="text-gray-600 mb-4">
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">S. exigua bagolylepke</h2>
+                <img src="newprod.pics/3.8.jpg" alt="S. exigua bagolylepke" class="mb-4 w-full h-48 sm:h-64 rounded-lg object-cover mx-auto">
+                <p class="text-sm sm:text-base text-gray-600 mb-4">
                     Spodoptera exigua (=apró jegyes bagolylepke) Az igen széles tápnövénykörű faj világkártevő, Eurázsiában, Amerikában, Afrikában és Auszrália egyes részein fordul elő. Hazánkban 2016-ig még nem észlelték.
                 </p>
-                <div class="bg-green-50 p-4 rounded-md">
-                    <p class="text-sm text-green-800">
+                <div class="bg-green-50 p-3 sm:p-4 rounded-md">
+                    <p class="text-xs sm:text-sm text-green-800">
                         <span class="font-medium">Javasolt csapdatípus:</span> VARL+
                         <br>
                         <span class="font-medium">Rendelhető:</span> 2017-től
@@ -278,14 +277,14 @@
             </div>
 
             <!-- 9. -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center">
-                <h2 class="text-xl font-semibold text-gray-900 mb-3">S. littoralis bagolylepke</h2>
-                <img src="newprod.pics/3.9.jpg" alt="S. frugiperda bagolylepke" class="mb-4 w-full rounded-lg object-cover mx-auto" style="height: 300px; width: 300px;">
-                <p class="text-gray-600 mb-4">
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">S. littoralis bagolylepke</h2>
+                <img src="newprod.pics/3.9.jpg" alt="S. littoralis bagolylepke" class="mb-4 w-full h-48 sm:h-64 rounded-lg object-cover mx-auto">
+                <p class="text-sm sm:text-base text-gray-600 mb-4">
                     Spodoptera littoralis (=trópusi lápi bagolylepke) A faj elterjedt a Közel Keleten és Afrikában, Európában egyes déli országokban fordul elő. Igen polifág, számos haszonnövény kártevője. Hazánkban 2016-ig még nem észlelték.
                 </p>
-                <div class="bg-green-50 p-4 rounded-md">
-                    <p class="text-sm text-green-800">
+                <div class="bg-green-50 p-3 sm:p-4 rounded-md">
+                    <p class="text-xs sm:text-sm text-green-800">
                         <span class="font-medium">Javasolt csapdatípus:</span> VARL+
                         <br>
                         <span class="font-medium">Rendelhető:</span> 2017-től
@@ -294,14 +293,14 @@
             </div>
 
             <!-- 10. -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center">
-                <h2 class="text-xl font-semibold text-gray-900 mb-3">Karcsúdíszbogár fajok</h2>
-                <img src="newprod.pics/3.10.jpg" alt="S. frugiperda bagolylepke" class="mb-4 w-full rounded-lg object-cover mx-auto" style="height: 300px; width: 300px;">
-                <p class="text-gray-600 mb-4">
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Karcsúdíszbogár fajok</h2>
+                <img src="newprod.pics/3.10.jpg" alt="Karcsúdíszbogár fajok" class="mb-4 w-full h-48 sm:h-64 rounded-lg object-cover mx-auto">
+                <p class="text-sm sm:text-base text-gray-600 mb-4">
                     Az egyes fajok szűk tápnövény körrel rendelkeznek. A lárvák élő növényi szövetekben, a fák vagy bokrok kérgében fejlődnek.
                 </p>
-                <div class="bg-green-50 p-4 rounded-md">
-                    <p class="text-sm text-green-800">
+                <div class="bg-green-50 p-3 sm:p-4 rounded-md">
+                    <p class="text-xs sm:text-sm text-green-800">
                         <span class="font-medium">Javasolt csapdatípus:</span> MULTz
                         <br>
                         <span class="font-medium">Rendelhető:</span> 2021-től
@@ -310,14 +309,14 @@
             </div>
 
             <!-- 11. -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center">
-                <h2 class="text-xl font-semibold text-gray-900 mb-3">Káposztabolha fajok</h2>
-                <img src="newprod.pics/3.11.jpg" alt="S. frugiperda bagolylepke" class="mb-4 w-full rounded-lg object-cover mx-auto" style="height: 300px; width: 300px;">
-                <p class="text-gray-600 mb-4">
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Káposztabolha fajok</h2>
+                <img src="newprod.pics/3.11.jpg" alt="Káposztabolha fajok" class="mb-4 w-full h-48 sm:h-64 rounded-lg object-cover mx-auto">
+                <p class="text-sm sm:text-base text-gray-600 mb-4">
                     A káposztaféléken, retken, repcén károsító káposztabolha fajokat egyaránt jól fogja. A Ph. vittula egyszikűeken károsító populációi is foghatók.
                 </p>
-                <div class="bg-green-50 p-4 rounded-md">
-                    <p class="text-sm text-green-800">
+                <div class="bg-green-50 p-3 sm:p-4 rounded-md">
+                    <p class="text-xs sm:text-sm text-green-800">
                         <span class="font-medium">Javasolt csapdatípus:</span> KLP+
                         <br>
                         <span class="font-medium">Rendelhető:</span> 2006-tól
@@ -326,28 +325,28 @@
             </div>
 
             <!-- 12. -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center">
-                <h2 class="text-xl font-semibold text-gray-900 mb-3">VARs+ csapda</h2>
-                <img src="newprod.pics/3.12.jpg" alt="S. frugiperda bagolylepke" class="mb-4 w-full rounded-lg object-cover mx-auto" style="height: 300px; width: 300px;">
-                <p class="text-gray-600 mb-4">
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">VARs+ csapda</h2>
+                <img src="newprod.pics/3.12.jpg" alt="VARs+ csapda" class="mb-4 w-full h-48 sm:h-64 rounded-lg object-cover mx-auto">
+                <p class="text-sm sm:text-base text-gray-600 mb-4">
                     Új, egyszerűsített modell A korábbi VARs+ csapdatípus alapján új csapdaalak modellt fejlesztettünk ki, az egyszerűbb összeszerelés és kezelhetőség érdekében.
                 </p>
-                <div class="bg-green-50 p-4 rounded-md">
-                    <p class="text-sm text-green-800">
+                <div class="bg-green-50 p-3 sm:p-4 rounded-md">
+                    <p class="text-xs sm:text-sm text-green-800">
                         <span class="font-medium">Rendelhető:</span> 2018-tól
                     </p>
                 </div>
             </div>
 
             <!-- 13. -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center">
-                <h2 class="text-xl font-semibold text-gray-900 mb-3">Tavaszi (v. kis) káposztalégy</h2>
-                <img src="newprod.pics/3.13.jpg" alt="Delia radicum" class="mb-4 w-full rounded-lg object-cover mx-auto" style="height: 300px; width: 300px;">
-                <p class="text-gray-600 mb-4">
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Tavaszi (v. kis) káposztalégy</h2>
+                <img src="newprod.pics/3.13.jpg" alt="Tavaszi káposztalégy" class="mb-4 w-full h-48 sm:h-64 rounded-lg object-cover mx-auto">
+                <p class="text-sm sm:text-base text-gray-600 mb-4">
                     A káposztafélék és más keresztesvirágú haszonnövények fontos kártevője. A csapda csalétke nem feromon, hanem táplálkozási attraktáns, nőstényeket és hímeket is csalogat.
                 </p>
-                <div class="bg-green-50 p-4 rounded-md">
-                    <p class="text-sm text-green-800">
+                <div class="bg-green-50 p-3 sm:p-4 rounded-md">
+                    <p class="text-xs sm:text-sm text-green-800">
                         <span class="font-medium">Javasolt csapdatípus:</span> KLP+
                         <br>
                         <span class="font-medium">Rendelhető:</span> 2017-től
@@ -356,14 +355,14 @@
             </div>
 
             <!-- 14. -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center">
-                <h2 class="text-xl font-semibold text-gray-900 mb-3">Kukoricamoly BISZEX csapda</h2>
-                <img src="newprod.pics/3.14.jpg" alt="Ostrinia nubilalis" class="mb-4 w-full rounded-lg object-cover mx-auto" style="height: 300px; width: 300px;">
-                <p class="text-gray-600 mb-4">
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Kukoricamoly BISZEX csapda</h2>
+                <img src="newprod.pics/3.14.jpg" alt="Kukoricamoly BISZEX csapda" class="mb-4 w-full h-48 sm:h-64 rounded-lg object-cover mx-auto">
+                <p class="text-sm sm:text-base text-gray-600 mb-4">
                     A CSALOMON® kukoricamoly "BISZEX" csapda csalétke NEM feromon, hanem táplálkozási attraktáns, emiatt a csapda nőstényeket és hímeket is fog.
                 </p>
-                <div class="bg-green-50 p-4 rounded-md">
-                    <p class="text-sm text-green-800">
+                <div class="bg-green-50 p-3 sm:p-4 rounded-md">
+                    <p class="text-xs sm:text-sm text-green-800">
                         <span class="font-medium">Javasolt csapdatípus:</span> VARL+
                         <br>
                         <span class="font-medium">Rendelhető:</span> 2016-tól
@@ -372,25 +371,20 @@
             </div>
 
             <!-- 15. -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center">
-                <h2 class="text-xl font-semibold text-gray-900 mb-3">Homoktövis-légy</h2>
-                <img src="newprod.pics/3.15.jpg" alt="Rhagoletis batava" class="mb-4 w-full rounded-lg object-cover mx-auto" style="height: 300px; width: 300px;">
-                <p class="text-gray-600 mb-4">
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Homoktövis-légy</h2>
+                <img src="newprod.pics/3.15.jpg" alt="Homoktövis-légy" class="mb-4 w-full h-48 sm:h-64 rounded-lg object-cover mx-auto">
+                <p class="text-sm sm:text-base text-gray-600 mb-4">
                     Az eredetileg Szibériában, Oroszországban elterjedt kártevő súlyos károkat okoz Észak-Európai homoktövis ültetvényeiben. Hazánkban 2015-ig még nem észlelték, de megjelenésére számítanunk kell.
-                </p>
-                <div class="bg-green-50 p-4 rounded-md">
-                    <p class="text-sm text-green-800">
+                 </p>
+                <div class="bg-green-50 p-3 sm:p-4 rounded-md">
+                    <p class="text-xs sm:text-sm text-green-800">
                         <span class="font-medium">Javasolt csapdatípus:</span> PALz
                         <br>
                         <span class="font-medium">Rendelhető:</span> 2016-tól
                     </p>
                 </div>
             </div>
-
-            </div>
-
-
-
         </div>
     </main>
 
