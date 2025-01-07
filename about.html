@@ -744,5 +744,20 @@
             </div>
         </div>
     </main>
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+      });
+
+      // Mobile section toggle
+      function toggleSection(id) {
+          const section = document.getElementById(id);
+          section.classList.toggle('hidden');
+      }
+  </script>
   </body
 </html>
