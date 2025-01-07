@@ -6,14 +6,14 @@
   <title>CSALOMON® Miért érdemes feromoncsapdát használni?</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body style="background-image: url('csalomon.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+<body style="background-image: url('csalomon.png'); background-size: cover; background-position: center; background-attachment: fixed;" class="min-h-screen">
     <header class="bg-white shadow-md">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between py-4">
-                <h1 class="text-3xl font-bold text-green-700">CSALOMON® csapdák</h1>
+                <h1 class="text-2xl md:text-3xl font-bold text-green-700">CSALOMON® csapdák</h1>
                 
                 <!-- Mobile menu button -->
-                <button class="md:hidden p-2" id="mobile-menu-button">
+                <button class="md:hidden p-2" id="mobile-menu-button" aria-label="Menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
@@ -70,13 +70,13 @@
             </div>
 
             <!-- Mobile Navigation -->
-            <nav class="hidden" id="mobile-menu">
+            <nav class="hidden transition-all duration-300" id="mobile-menu">
                 <div class="flex flex-col space-y-2 pb-4 text-gray-600">
                     <!-- Főoldal szekció -->
                     <div class="border-b border-gray-200">
                         <button class="w-full py-2 px-4 text-left hover:bg-gray-50 flex justify-between items-center" onclick="toggleSection('fooldal')">
                             Főoldal
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </button>
                         <div id="fooldal" class="hidden pl-4">
                             <a href="index.html" class="block py-2 hover:text-green-600">Kezdőlap</a>
@@ -89,13 +89,13 @@
                     <div class="border-b border-gray-200">
                         <button class="w-full py-2 px-4 text-left hover:bg-gray-50 flex justify-between items-center" onclick="toggleSection('termekek')">
                             Termékek
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </button>
                         <div id="termekek" class="hidden pl-4">
                             <a href="miert.html" class="block py-2 hover:text-green-600">Miért érdemes csapdázni?</a>
                             <a href="csapdakin.html" class="block py-2 hover:text-green-600">Csapdakínálatunk</a>
                             <a href="hasznosrovarok.html" class="block py-2 hover:text-green-600">Hasznos rovarok csalogatása</a>
-                            <a href="csapdatipus.html"block py-2 hover:text-green-600">Csapdatípusaink</a>
+                            <a href="csapdatipus.html" class="block py-2 hover:text-green-600">Csapdatípusaink</a>
                             <a href="https://csalomon/news.html" class="block py-2 hover:text-green-600">Kukoricabogár csapdák</a>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
                     <div class="border-b border-gray-200">
                         <button class="w-full py-2 px-4 text-left hover:bg-gray-50 flex justify-between items-center" onclick="toggleSection('info')">
                             Információk
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </button>
                         <div id="info" class="hidden pl-4">
                             <a href="https://csalomon/partners.html" class="block py-2 hover:text-green-600">Partnereink</a>
@@ -117,7 +117,7 @@
                     <div class="border-b border-gray-200">
                         <button class="w-full py-2 px-4 text-left hover:bg-gray-50 flex justify-between items-center" onclick="toggleSection('vasarlas')">
                             Vásárlás
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </button>
                         <div id="vasarlas" class="hidden pl-4">
                             <a href="https://csalomon/gallery.html" class="block py-2 hover:text-green-600">Megrendelés Menete</a>
@@ -133,16 +133,44 @@
             <script>
                 function toggleSection(sectionId) {
                     const section = document.getElementById(sectionId);
+                    const button = section.previousElementSibling;
+                    const arrow = button.querySelector('svg');
+                    
                     section.classList.toggle('hidden');
+                    if (!section.classList.contains('hidden')) {
+                        arrow.style.transform = 'rotate(180deg)';
+                    } else {
+                        arrow.style.transform = 'rotate(0)';
+                    }
                 }
+
+                // Mobile menu toggle with animation
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                    } else {
+                        mobileMenu.style.maxHeight = '0';
+                    }
+                });
+
+                // Close mobile menu on window resize if screen becomes larger
+                window.addEventListener('resize', () => {
+                    if (window.innerWidth >= 768) { // md breakpoint
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
             </script>
         </div>
     </header>
 
-  <div class="max-w-4xl mx-auto">
-    <h1 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 px-4 sm:px-0">Miért érdemes feromoncsapdát használni?</h1>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <h1 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Miért érdemes feromoncsapdát használni?</h1>
 
-    <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 mb-8 mx-4 sm:mx-0 hover:shadow-2xl transition-all duration-300">
+    <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 mb-8 hover:shadow-2xl transition-all duration-300">
       <div class="space-y-6">
         <p class="text-gray-700 leading-relaxed">
           A feromonok gyakorlati alkalmazásának legkézenfekvőbb módja, ha csalétekként csapdába helyezzük őket és a fogás alapján tájékozódunk a kártevő fajok jelenlétéről, rajzáskezdetéről, populációnagyságáról és rajzásmenetéről egy kérdéses területen. Ez a módszer hatékonyabb, célzottabb, környezetbarátabb és kevesebb költséggel járó vegyszeres növényvédelmet biztosít a termesztők számára. Ebben a rövid ismertetőkben szeretnénk bemutatni, hogy miért érdemes feromoncsapdát használni, és melyek azok az értékes, fontos információk, amelyekhez a feromoncsapda segítségével hozzájuthatunk.
@@ -176,15 +204,18 @@
       </div>
     </div>
 
-    <div class="space-y-4 sm:space-y-6"> <!-- Increased space between sections -->
-        <div class="grid grid-cols-1 gap-12">
-            <!-- Első szekció -->
+    <div class="space-y-8 sm:space-y-12">
+        <div class="grid grid-cols-1 gap-8 sm:gap-12">
+            <!-- Content sections here -->
+            <!-- Each section should follow similar responsive patterns -->
+            <!-- Example of a responsive section: -->
+            
             <div id="mire-valo" class="bg-white rounded-2xl shadow-xl p-6 lg:p-8 hover:shadow-2xl transition-shadow duration-300">
                 <div class="grid lg:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <h2 class="text-2xl lg:text-3xl font-bold text-green-700 mb-6">NEM KELL TALÁLGATNUNK - A FEROMONCSAPDÁVAL PONTOSAN MÉRHETŐ!</h2>
+                    <div class="space-y-6">
+                        <h2 class="text-2xl lg:text-3xl font-bold text-green-700">NEM KELL TALÁLGATNUNK - A FEROMONCSAPDÁVAL PONTOSAN MÉRHETŐ!</h2>
                         
-                        <p class="text-gray-700 leading-relaxed mb-6">
+                        <p class="text-gray-700 leading-relaxed">
                             Az éghajlati, földrajzi viszonyok, a termesztett növények fajtája, vagy az adott év időjárási viszonyainak különbözősége miatt, eltérő területeken különbözhet, hogy melyik kártevő faj okozza a kártétel „gerincét". Az egyes, hasonló kártételt okozó, vagy közeli rokonságban álló fajok egymástól gyakran eltérő időben rajzanak a vegetációs időszak során.
                         </p>
                         
@@ -835,20 +866,6 @@
     </div>
   </div>
 
-  <script>
-    // Mobile menu toggle
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
 
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-
-    // Mobile section toggle
-    function toggleSection(id) {
-        const section = document.getElementById(id);
-        section.classList.toggle('hidden');
-    }
-</script>
 </body>
 </html>

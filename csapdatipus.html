@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body style="background-image: url('csalomon.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+<body style="background-image: url('csalomon.png'); background-size: cover; background-position: center; background-attachment: fixed;" class="min-h-screen">
     <header class="bg-white shadow-md relative z-50">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between py-4">
-                <h1 class="text-3xl font-bold text-green-700">CSALOMON® csapdák</h1>
+                <h1 class="text-2xl md:text-3xl font-bold text-green-700">CSALOMON® csapdák</h1>
                 
                 <!-- Mobile menu button -->
                 <button class="md:hidden p-2" id="mobile-menu-button">
@@ -132,17 +132,40 @@
             </nav>
   
             <script>
-                function toggleSection(sectionId) {
-                    const section = document.getElementById(sectionId);
+                // Mobile menu toggle
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                // Mobile section toggle 
+                function toggleSection(id) {
+                    const section = document.getElementById(id);
                     section.classList.toggle('hidden');
                 }
+
+                // Close mobile menu on window resize
+                window.addEventListener('resize', () => {
+                    if (window.innerWidth >= 768) { // md breakpoint
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
             </script>
         </div>
     </header>
 
-    <main>
+    <main class="min-h-screen">
         <!-- Ragacsos csapda szekció -->
-        <section class="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+        <section class="py-8 md:py-16 px-4 md:px-8 max-w-7xl mx-auto">
             <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
                 <!-- Kép szekció -->
                 <div class="aspect-w-16 aspect-h-9">
@@ -153,9 +176,9 @@
                     >
                 </div>
                 
-                <div class="p-8">
-                    <div class="flex items-center justify-between mb-6">
-                        <h2 class="text-3xl font-bold text-gray-800">Ragacsos csapda (RAG)</h2>
+                <div class="p-4 md:p-8">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-800">Ragacsos csapda (RAG)</h2>
                         <a href="https://www.youtube.com/watch?v=TcqxlZM5bCg" 
                            target="_blank"
                            class="inline-flex items-center gap-2 text-green-600 hover:text-green-700 transition-colors">
@@ -166,26 +189,26 @@
                         </a>
                     </div>
 
-                    <div class="space-y-6 text-gray-600">
+                    <div class="space-y-4 md:space-y-6 text-gray-600">
                         <p class="leading-relaxed">
                             Az odacsalogatott kártevőket cserélhető ragacsos lapján fogja meg. Az egységcsomagban levő tartozékokkal 1 rajzás ideje alatt (4-6 hét) biztonságosan üzemeltethető.
                         </p>
 
-                        <div class="bg-green-50 p-6 rounded-xl">
+                        <div class="bg-green-50 p-4 md:p-6 rounded-xl">
                             <h3 class="font-semibold text-green-800 mb-3">Mikor használjuk?</h3>
                             <p>
                                 Akkor használjuk, ha célunk a kártevő megjelenésének minél korábbi jelzése. Minden más csapdatípusnál érzékenyebben fogja be már a legelső megjelenő kártevő példányokat!
                             </p>
                         </div>
 
-                        <div class="bg-blue-50 p-6 rounded-xl">
+                        <div class="bg-blue-50 p-4 md:p-6 rounded-xl">
                             <h3 class="font-semibold text-blue-800 mb-3">Karbantartási útmutató</h3>
                             <p>
                                 Ragacslap csere 7-10 naponként. Erős kártevő-rajzás esetén erre gyakrabban is szükség lehet.
                             </p>
                         </div>
 
-                        <div class="bg-gray-50 p-6 rounded-xl">
+                        <div class="bg-gray-50 p-4 md:p-6 rounded-xl">
                             <h3 class="font-semibold text-gray-800 mb-3">Biztonsági információk</h3>
                             <p>
                                 A ragacsos csapdatípusaink ragacsanyaga semmilyen egészségre, vagy a környezetre veszélyes tulajdonsággal nem rendelkezik.
@@ -205,11 +228,11 @@
         </section>
 
         <!-- Palást csapda szekció -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
             <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition-transform duration-300">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <!-- Bal oldali oszlop -->
-                    <div class="p-8 space-y-6">
+                    <div class="p-4 md:p-8 space-y-6">
                         <!-- Felső kép -->
                         <div class="aspect-w-4 aspect-h-3 group">
                             <img 
@@ -219,7 +242,7 @@
                             >
                         </div>
                         <!-- Alsó szekció -->
-                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-4 md:p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
                             <h3 class="font-semibold text-gray-800 mb-3 text-lg">Biztonsági információk</h3>
                             <p class="text-gray-600 leading-relaxed">
                                 A ragacsos csapdatípusaink ragacsanyaga semmilyen egészségre, vagy a környezetre veszélyes tulajdonsággal nem rendelkezik.
@@ -235,11 +258,11 @@
                         </div>
                     </div>
                     <!-- Jobb oldali oszlop -->
-                    <div class="p-8 space-y-6">
+                    <div class="p-4 md:p-8 space-y-6">
                         <!-- Felső szekció -->
                         <div>
                             <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6 gap-4">
-                                <h2 class="text-3xl font-bold text-gray-800 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">Palást csapda (PAL, PALf, PALs, PALz)</h2>
+                                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">Palást csapda (PAL, PALf, PALs, PALz)</h2>
                                 <a href="https://www.youtube.com/watch?v=TcqxlZM5bCg" 
                                    target="_blank"
                                    class="inline-flex items-center gap-2 text-green-600 hover:text-green-700 transition-colors group">
@@ -262,14 +285,14 @@
                             >
                         </div>
                         <!-- Alsó szekció -->
-                        <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-4 md:p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
                             <h3 class="font-semibold text-blue-800 mb-3 text-lg">Karbantartási útmutató</h3>
                             <p class="text-blue-700 leading-relaxed">
                                 A ragacsos csapdatest kicserélése csak akkor szükséges, ha már a fogott nagyszámú rovar teljesen beborítja a ragacsos felületet.
                             </p>
                         </div>
                         <!-- Középső szekció -->
-                        <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="bg-gradient-to-br from-green-50 to-green-100 p-4 md:p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
                             <h3 class="font-semibold text-green-800 mb-3 text-lg">Mikor használjuk?</h3>
                             <p class="text-green-700 leading-relaxed">
                                 Akkor használjuk, ha a csapdázni kívánt kártevő nem túl jó repülő (pl. amerikai kukoricabogár), vagy ha nem szívesen repül be a szokványos csapda belsejébe (pl. cseresznyelégy).
@@ -280,20 +303,20 @@
             </div>
         </section>
 
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
             <div class="bg-white rounded-2xl shadow-xl overflow-hidden max-w-7xl mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <!-- Bal oldali oszlop -->
-                    <div class="p-8 bg-gradient-to-br from-gray-50 to-gray-100">
+                    <div class="p-4 md:p-8 bg-gradient-to-br from-gray-50 to-gray-100">
                         <div class="space-y-6">
                             <div class="space-y-4">
-                                <h2 class="text-3xl font-bold text-gray-800 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+                                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
                                     Varsás csapda (VARL)
                                 </h2>
                                 <p class="text-gray-600 leading-relaxed">
                                     Az odacsalogatott kártevők a varsás szerkezet belsejéből nem tudnak szabadulni. Az egységcsomagban levő tartozékokkal 1 rajzás ideje alatt (4-6 hét) biztonságosan üzemeltethető.
                                 </p>
-                                <div class="bg-amber-50 p-6 rounded-xl">
+                                <div class="bg-amber-50 p-4 md:p-6 rounded-xl">
                                     <h3 class="font-semibold text-amber-800 mb-3">Főbb jellemzők:</h3>
                                     <ul class="space-y-2 text-amber-700">
                                         <li class="flex items-start">
@@ -330,7 +353,7 @@
                     </div>
 
                     <!-- Jobb oldali oszlop -->
-                    <div class="p-8 space-y-8">
+                    <div class="p-4 md:p-8 space-y-8">
                         <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6 gap-4">
                             <h2 class="text-2xl font-bold text-gray-800">Alkalmazási területek</h2>
                             <a href="https://www.youtube.com/watch?v=n78scEGEcqo" 
@@ -890,20 +913,6 @@
             </div>
         </section>
     </main>
-    <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Mobile section toggle
-        function toggleSection(id) {
-            const section = document.getElementById(id);
-            section.classList.toggle('hidden');
-        }
-    </script>
+    
 </body>
 </html>

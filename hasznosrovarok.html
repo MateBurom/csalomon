@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body style="background-image: url('csalomon.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+<body style="background-image: url('csalomon.png'); background-size: cover; background-position: center; background-attachment: fixed;" class="min-h-screen">
     <header class="bg-white shadow-md">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between py-4">
-                <h1 class="text-3xl font-bold text-green-700">CSALOMON® csapdák</h1>
+                <h1 class="text-xl sm:text-2xl md:text-3xl font-bold text-green-700">CSALOMON® csapdák</h1>
                 
                 <!-- Mobile menu button -->
-                <button class="md:hidden p-2" id="mobile-menu-button">
+                <button class="md:hidden p-2" id="mobile-menu-button" aria-label="Menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
@@ -71,15 +71,15 @@
             </div>
 
             <!-- Mobile Navigation -->
-            <nav class="hidden" id="mobile-menu">
+            <nav class="hidden transition-all duration-300 ease-in-out" id="mobile-menu">
                 <div class="flex flex-col space-y-2 pb-4 text-gray-600">
                     <!-- Főoldal szekció -->
                     <div class="border-b border-gray-200">
                         <button class="w-full py-2 px-4 text-left hover:bg-gray-50 flex justify-between items-center" onclick="toggleSection('fooldal')">
                             Főoldal
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </button>
-                        <div id="fooldal" class="hidden pl-4">
+                        <div id="fooldal" class="hidden pl-4 transition-all duration-300">
                             <a href="index.html" class="block py-2 hover:text-green-600">Kezdőlap</a>
                             <a href="about.html" class="block py-2 hover:text-green-600">Rólunk</a>
                             <a href="new.prod.html" class="block py-2 hover:text-green-600">Új termékeink</a>
@@ -90,13 +90,13 @@
                     <div class="border-b border-gray-200">
                         <button class="w-full py-2 px-4 text-left hover:bg-gray-50 flex justify-between items-center" onclick="toggleSection('termekek')">
                             Termékek
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </button>
-                        <div id="termekek" class="hidden pl-4">
+                        <div id="termekek" class="hidden pl-4 transition-all duration-300">
                             <a href="miert.html" class="block py-2 hover:text-green-600">Miért érdemes csapdázni?</a>
                             <a href="csapdakin.html" class="block py-2 hover:text-green-600">Csapdakínálatunk</a>
                             <a href="hasznosrovarok.html" class="block py-2 hover:text-green-600">Hasznos rovarok csalogatása</a>
-                            <a href="csapdatipus.html"block py-2 hover:text-green-600">Csapdatípusaink</a>
+                            <a href="csapdatipus.html" class="block py-2 hover:text-green-600">Csapdatípusaink</a>
                             <a href="https://csalomon/news.html" class="block py-2 hover:text-green-600">Kukoricabogár csapdák</a>
                         </div>
                     </div>
@@ -105,9 +105,9 @@
                     <div class="border-b border-gray-200">
                         <button class="w-full py-2 px-4 text-left hover:bg-gray-50 flex justify-between items-center" onclick="toggleSection('info')">
                             Információk
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </button>
-                        <div id="info" class="hidden pl-4">
+                        <div id="info" class="hidden pl-4 transition-all duration-300">
                             <a href="https://csalomon/partners.html" class="block py-2 hover:text-green-600">Partnereink</a>
                             <a href="https://csalomon/downloads.html" class="block py-2 hover:text-green-600">Szakcikkeink</a>
                             <a href="https://csalomon/support.html" class="block py-2 hover:text-green-600">Gyakori kérdések</a>
@@ -118,9 +118,9 @@
                     <div class="border-b border-gray-200">
                         <button class="w-full py-2 px-4 text-left hover:bg-gray-50 flex justify-between items-center" onclick="toggleSection('vasarlas')">
                             Vásárlás
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </button>
-                        <div id="vasarlas" class="hidden pl-4">
+                        <div id="vasarlas" class="hidden pl-4 transition-all duration-300">
                             <a href="https://csalomon/gallery.html" class="block py-2 hover:text-green-600">Megrendelés Menete</a>
                             <a href="https://csalomon/blog.html" class="block py-2 hover:text-green-600">Webáruház</a>
                             <a href="https://csalomon/shop.html" class="block py-2 hover:text-green-600">Adatkezelési tájékoztató</a>
@@ -132,10 +132,33 @@
             </nav>
 
             <script>
-                function toggleSection(sectionId) {
-                    const section = document.getElementById(sectionId);
+                // Mobile menu toggle
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                // Mobile section toggle 
+                function toggleSection(id) {
+                    const section = document.getElementById(id);
                     section.classList.toggle('hidden');
                 }
+
+                // Close mobile menu on window resize
+                window.addEventListener('resize', () => {
+                    if (window.innerWidth >= 768) { // md breakpoint
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
             </script>
         </div>
     </header>
@@ -553,21 +576,6 @@
         
     </main>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Mobile section toggle
-        function toggleSection(id) {
-            const section = document.getElementById(id);
-            section.classList.toggle('hidden');
-        }
-    </script>
     
     <footer class="bg-green-700 text-white mt-16 py-12">
         <div class="container mx-auto px-6">
